@@ -35,4 +35,4 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Setup aliases
-alias dotfiles='cd ~/dotfiles'
+alias dotfiles='cd ~/dotfiles && git status'
