@@ -1,0 +1,4 @@
+# This is Git's per-user configuration file.
+[user]
+	email = miguel@balena.io
+	name = Miguel Casqueira

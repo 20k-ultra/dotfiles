@@ -29,3 +29,6 @@ PS1='[\u@\h \W]\$ '
 if [[ $TERM == xterm-termite ]]; then
 	clear && neofetch --gtk2 off --gtk3 off
 fi
+
+# Setup exports
+export EDITOR=vim
