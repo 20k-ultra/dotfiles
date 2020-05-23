@@ -31,4 +31,8 @@ if [[ $TERM == xterm-termite ]]; then
 fi
 
 # Setup exports
-export EDITOR=vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Setup aliases
+alias dotfiles='cd ~/dotfiles'

@@ -14,7 +14,7 @@ ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
 echo 'To change your wallpaper (which will theme your system to match), run
 	$ wal -i /path/to/image.jpg'
 
-if [[ ! -e "ttf-material-design-icons-git" ]]; then
+if [[ ! -d "ttf-material-design-icons-git" ]]; then
 	echo "Installing the required icon pack so waybar functions correctly."
 	cd ~/dotfiles
 	git clone https://aur.archlinux.org/ttf-material-design-icons-git.git
