@@ -1,21 +1,27 @@
-# SwayEcosystem
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberrumor)
+# dotfiles
 
+### Installation
 
-<img src="/home/cyberrumor/makodemo.png">
+There are setup scripts in the base dir which can be run from a fresh install or an existing one.
 
-Here's the same scene, right after swapping wallpapers with pywal:
+```sh
+sudo pacman -Syu git
 
-<img src="/home/cyberrumor/waldemo.png">
+git clone https://github.com/20k-ultra/dotfiles
 
-Pretty lockscreen achieved by combing [grim](https://github.com/emersion/grim) + [imagemagick](https://imagemagick.org/index.php) + swaylock
+cd dotfiles
 
-<img src="/home/cyberrumor/blurshot.png">
+# Review both RootSetup.sh and UserSetup.sh.
 
-# Attention to Detail
-- All parts of the interface are themed with pywal, not just terminal colors. This includes the bar, app launcher, notifications, and even the lock screen. 
-- The app launcher and bar are the same height, so you won't notice any distracting or irritating graphic discrepencies. Notification padding has been adjusted to a precision of 1 pixel. 
-- Light transparency brings grace to your interface without sacrificing legibility. 
+# If you're on an existing system, disable your display manager and change the wallpaper path in UserSetup.sh.
 
-# Automated Installation
-Please see the [wiki](https://github.com/cyberrumor/SwayEcosystem/wiki/Installation).
+sudo sh RootSetup.sh
+
+sh UserSetup.sh
+
+# REBOOT
+
+# If you ever want to change your wallpaper, do so with wal.
+
+wal -i /path/to/image.jpg
+```
