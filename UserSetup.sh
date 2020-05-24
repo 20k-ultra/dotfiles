@@ -25,3 +25,11 @@ fi
 
 # Installing user packages
 sudo pacman -S --needed $(comm -12 <(pacman -Slq|sort) <(sort pacmanPkg.list) )
+
+# Install antigen
+if [[ ! -e ~/antigen.zsh ]]; then
+	curl -L git.io/antigen > ~/antigen.zsh
+fi
+
+# Change login shell for user
+chsh -s /bin/zsh mig
