@@ -24,7 +24,7 @@ if [[ ! -d "ttf-material-design-icons-git" ]]; then
 fi
 
 # Installing user packages
-sudo pacman -S --needed $(comm -12 <(pacman -Slq|sort) <(sort pacmanPkg.list) )
+sudo pacman -S --needed $(comm -12 <(pacman -Slq|sort) <(sort userPkg.list) )
 
 # Install antigen
 if [[ ! -e ~/antigen.zsh ]]; then

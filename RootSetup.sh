@@ -1,20 +1,21 @@
-echo 'Updating.'
+# Update packages
 pacman -Syu
-echo 'Installing necessary packages.'
-pacman -S xdg-user-dirs sway swaybg xorg-server-xwayland swaylock swayidle python-pywal grim neofetch pulseaudio pulseaudio-alsa pamixer imagemagick mako libnotify bemenu waybar capitaine-cursors arc-gtk-theme arc-icon-theme ttf-ubuntu-font-family archlinux-wallpaper bash-completion pkgfile
-echo 'Copying systemwide configurations for quality of life improvements.'
+
+# Install packages
+pacman -S --needed $(comm -12 <(pacman -Slq|sort) <(sort rootPkg.list) )
+
+# Create directories
 mkdir /etc/systemd/system
+mkdir /usr/local/bin
+
+# Copy system wide configurations/scripts
 cp -r etc /etc
 cp usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh /usr/lib/systemd/system-sleep/
-chmod +x /usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh
-mkdir /usr/local/bin
 cp usr/local/bin/* /usr/local/bin/
-chmod +x /usr/local/bin/*
-echo "preparing command-not-found feature"
-pkgfile --update
-echo "If you're using intel backlight and brightness controls don't work,"
-echo "try adding your user to the video group."
-echo "If that still doesn't work, see https://wiki.archlinux.org/index.php/Backlight#ACPI"
-echo "If you're not using intel-backlight, the scripts are in /usr/local/bin. GLHF!"
-echo "If you're in chroot, don't forget to install a bootloader!"
 
+# Tag scripts as executable
+chmod +x /usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh
+chmod +x /usr/local/bin/*
+
+# Setup packages
+pkgfile --update
