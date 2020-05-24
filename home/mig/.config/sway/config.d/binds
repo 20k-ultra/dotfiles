@@ -61,6 +61,7 @@ bindsym $mod+Shift+Right move right
 # Workspaces:
 #
 # switch to workspace
+bindsym $mod+tab workspace next_on_output
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
