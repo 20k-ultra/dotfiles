@@ -8,7 +8,7 @@ set $down k
 set $up l
 set $right semicolon
 
-set $term termite
+set $term kitty
 
 set $gaps 6
 set $border 2
