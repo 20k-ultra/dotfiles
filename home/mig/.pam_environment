@@ -1,0 +1,3 @@
+DESKTOP_SESSION             DEFAULT=sway
+VISUAL                      DEFAULT=vim
+EDITOR                      DEFAULT=${VISUAL}

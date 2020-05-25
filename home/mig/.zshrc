@@ -13,10 +13,6 @@ antigen init ~/.antigenrc
 # Import pywal colors
 (cat ~/.cache/wal/sequences &)
 
-# Setup exports
-export VISUAL=vim
-export EDITOR="$VISUAL"
-
 # Setup aliases
 alias ls='ls --color=auto'
 alias cpdots='cp -rT ~/dotfiles/home/mig ~/ && echo "dotfiles applied"'
