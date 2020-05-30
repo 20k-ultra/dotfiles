@@ -1,0 +1,7 @@
+mount_usb () {
+  sudo mount /dev/sda1 /media/usb
+}
+
+remove_usb () {
+    sudo umount /dev/sda1
+}

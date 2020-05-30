@@ -11,7 +11,7 @@ source ~/antigen.zsh
 antigen init ~/.antigenrc
 
 # Source Bash functions
-. ~/.bash_functions
+. ~/.functions
 
 # Import pywal colors
 (cat ~/.cache/wal/sequences &)
