@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 cd ~/dotfiles
 
@@ -16,7 +16,7 @@ if [[ ! -e ~/.config/mako/config ]]; then
 	wal -i $XDG_CONFIG_HOME/wallpaper.png
 	ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
 fi
-	
+
 # Installing the required icon pack so waybar functions correctly.
 if [[ ! -d "ttf-material-design-icons-git" ]]; then
 	git clone https://aur.archlinux.org/ttf-material-design-icons-git.git
@@ -26,6 +26,8 @@ if [[ ! -d "ttf-material-design-icons-git" ]]; then
 fi
 
 # Installing user packages
+#TODO: install these with yay
+# because some packages don't show up in pacman search but they do for yay?
 sudo pacman -S --needed - < userPkg.list &&
 	chsh -s /bin/zsh mig # piggy back onto this sudo execuation so we don't get asked for pw again
 
