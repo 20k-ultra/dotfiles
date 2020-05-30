@@ -1,3 +1,4 @@
 DESKTOP_SESSION             DEFAULT=sway
 VISUAL                      DEFAULT=vim
 EDITOR                      DEFAULT=${VISUAL}
+MOZ_ENABLE_WAYLAND          DEFAULT=1
