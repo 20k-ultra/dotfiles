@@ -3,5 +3,5 @@ mount_usb () {
 }
 
 remove_usb () {
-    sudo umount /dev/sda1
+  sudo umount /dev/sda1
 }
