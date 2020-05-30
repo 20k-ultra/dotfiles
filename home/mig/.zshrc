@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Load nvm
+source /usr/share/nvm/init-nvm.sh
+
 # Load Antigen
 source ~/antigen.zsh
 
