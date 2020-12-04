@@ -1,7 +1,7 @@
 #!/bin/bash
 
 getname() {
-	ls /sys/class/power_supply/ | tail -n1
+	ls /sys/class/power_supply/ | grep 'BAT'
 }
 
 ifcharging() {

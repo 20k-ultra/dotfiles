@@ -1,0 +1,22 @@
+{
+  "autoCollapseExpandSubtreeOnAttach": false,
+  "autoCollapseExpandSubtreeOnSelect": false,
+  "closeParentBehaviorMode": 1,
+  "configsVersion": 9,
+  "lastDraggedTabs": {
+    "tabIds": [
+      11
+    ],
+    "urlsDigest": "8019eace71f6fa72d3c785c7d8607ca79d1e58e8"
+  },
+  "notifiedFeaturesVersion": 4,
+  "optionsExpandedSections": [
+    "section-appearance",
+    "section-contextMenu",
+    "section-treeBehavior",
+    "section-advanced",
+    "section-addons",
+    "section-debug"
+  ],
+  "style": "plain-dark"
+}

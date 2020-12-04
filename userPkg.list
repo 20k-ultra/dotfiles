@@ -12,4 +12,13 @@ firefox-developer
 docker
 docker-compose-bin
 unzip
-rTorrent
+webtorrent-cli
+youtube-dl
+slurp
+wl-clipboard
+httpie
+rustup
+avahi
+cura
+freecad
+nss-mdns

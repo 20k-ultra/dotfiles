@@ -78,6 +78,8 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsdk": "node_modules/typescript/lib",
     "workbench.colorTheme": "Purrora",
     "workbench.colorCustomizations": {
         "statusBar.background": "#131225",
