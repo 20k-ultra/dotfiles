@@ -60,7 +60,7 @@
     "guides.overrideDefault": false,
     // Send anonymous usage statistics data to the developer.
     "guides.sendUsagesAndStats": false,
-    "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": false,
     "cSpell.ignorePaths": [
         "**/node_modules/**",
         "**/vscode-extension/**",
