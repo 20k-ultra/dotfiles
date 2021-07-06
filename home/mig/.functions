@@ -5,3 +5,21 @@ mount_usb () {
 remove_usb () {
   sudo umount /dev/sda1
 }
+
+copy_config () {
+  # Copy configuration files to your user folder.
+  cp -rT ~/dotfiles/home/mig ~/
+}
+
+bob () {
+  NODE_EXTRA_CA_CERTS=/home/mig/Projects/balena-on-balena/keys/haproxy-certs/ca.pem \
+  BALENARC_BALENA_URL=my.devenv.local \
+  BALENARC_DATA_DIRECTORY=~/.balena/balena-on-balena \
+    balena $@
+}
+
+balena_staging () {
+  BALENARC_BALENA_URL=balena-staging.com \
+  BALENARC_DATA_DIRECTORY=~/.balena/staging \
+    balena $@
+}
