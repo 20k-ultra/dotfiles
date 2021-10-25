@@ -2,13 +2,17 @@
 
 This repository is for my X1E laptop running Debian. 
 
-Repo is heavily inspired by https://github.com/holman/dotfiles structure. 
-
 ## Prerequisites
 
-Just install git: `apt install git`.
+On a freshly provisioned Debian system you just need to install git:
+
+```
+apt install git
+```
 
 ## Setup
+
+Everything is configured within this repo which will automatically apply changes since they are symlinks! A prompt will ask you what to do if a symlink already exists.
 
 Run the following to install all the packages and configure them:
  
@@ -18,17 +22,15 @@ cd ~/.dotfiles
 ./bootstrap.sh
 ```
 
-This will go into each topic and install the packages and configure them by symlinking dotfiles or running custom configure scripts. See [Structure](#structure). 
-
-Everything is configured and tweaked within ~/.dotfiles which will automatically apply changes since they are symlinks! A prompt will ask you what to do if a symlink already exists.
+This will go into each topic and install the packages and configure them by symlinking dotfiles or running custom configure scripts. See [Structure](#structure) for more info. 
 
 ## Structure
 
-Each folder is a topic with several special files that will be processed differently when the bootstrap script runs.
+Each folder is a **topic** with several special files that will be processed differently when the bootstrap script runs.
 
-The bootstrap.sh script just iterates over the topics and installs their packages and then configures using apt to install and symlinking dotfiles. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files)!
+The bootstrap.sh script just iterates over the topics and installs their packages via apt and then symlinks files into your $HOME directory. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files) if the topic requires more then just symlinking!
 
-NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The installer will not symlink `.zsh` files.
+> NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The installer will not symlink `.zsh` files.
 
 ### Special topics:
 
@@ -49,3 +51,6 @@ NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The in
  - **topic/topicPkg.list**: Contains all the packages related to the topic. Can be a single package.
  - **topic/*.symlink**: Any file ending in *.symlink gets symlinked into your $HOME. This is so you can keep all of those versioned in your dotfiles but still keep those autoloaded files in your home directory. These get symlinked in when you run bootstrap.sh.
 
+## Design Inspiration
+
+Repo is inspired by https://github.com/holman/dotfiles approach to dotfile management by seperating software into topics and defining common interfaces to installing and configuring them. 
