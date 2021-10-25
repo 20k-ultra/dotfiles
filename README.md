@@ -38,7 +38,7 @@ NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The in
 
 ### Special execution files:
 
- - topic/config.sh: Any file named config.sh within a topic will be executed when you run bootstrap.sh instead of just symlinking *.symlink files.
+ - topic/config.sh: Any file named config.sh within a topic will be executed after any files matching *.symlinks are symlinked.
  - topic/install.sh: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to apt.
  
 ### Special file types:

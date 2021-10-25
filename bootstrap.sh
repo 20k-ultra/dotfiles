@@ -139,13 +139,16 @@ install_topic () {
 
 configure_topic() {
     progress "  Configuring..."
-    if [ -f $1/config.sh ]; then
-        bash "$1/config.sh"
-    elif [[ $(find ./$1 -maxdepth 1 -name "*.symlink") ]]; then 
+    
+    if [[ $(find ./$1 -maxdepth 1 -name "*.symlink") ]]; then 
         link_dotfiles $1
     else
        progress "       No files to link..."
     fi
+
+    if [ -f $1/config.sh ]; then
+        bash "$1/config.sh"
+    fi 
 }
 
 sudo apt update && sudo apt upgrade -y
