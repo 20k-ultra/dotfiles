@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# bootstrap.sh will go into each topic and pass the topicPkg.list file to pacman to be downloaded and installed. 
+# bootstrap.sh will go into each topic and pass the topicPkg.list file to apt to be downloaded and installed. 
 # After that any *smylink will be symlinked.
 #
 # If a topic has an install.sh or config.sh then those will be ran instead of the generic install/link.
@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-        sudo pacman -S --needed - < "$DOTFILES_ROOT/$1/topicPkg.list"
+        "$DOTFILES_ROOT/$1/topicPkg.list" xargs sudo apt install -y
     else
         progress "      No packages to install."
     fi
@@ -148,7 +148,7 @@ configure_topic() {
     fi
 }
 
-sudo pacman -Syu
+sudo apt update && sudo apt upgrade -y
 
 for topic in */ ; do
     info "Found ${topic%/} topic!"

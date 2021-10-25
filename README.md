@@ -1,12 +1,12 @@
 # dotfiles
 
-This repository is for my X1E laptop running Arch. 
+This repository is for my X1E laptop running Debian. 
 
 Repo is heavily inspired by https://github.com/holman/dotfiles structure. 
 
 ## Prerequisites
 
-Just install git: `pacman -S git`.
+Just install git: `apt install git`.
 
 ## Setup
 
@@ -20,15 +20,15 @@ cd ~/.dotfiles
 
 This will go into each topic and install the packages and configure them by symlinking dotfiles or running custom configure scripts. See [Structure](#structure). 
 
-Everything is configured and tweaked within ~/.dotfiles which will automatically apply changes since they are symlinks! Package installs are done with the `--needed` flag so only packages needed will be downloaded and installed. A prompt will ask you what to do if a symlink already exists.
+Everything is configured and tweaked within ~/.dotfiles which will automatically apply changes since they are symlinks! A prompt will ask you what to do if a symlink already exists.
 
 ## Structure
 
 Each folder is a topic with several special files that will be processed differently when the bootstrap script runs.
 
-The bootstrap.sh script just iterates over the topics and installs their packages and then configures using pacman to install and symlinking dotfiles. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files)!
+The bootstrap.sh script just iterates over the topics and installs their packages and then configures using apt to install and symlinking dotfiles. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files)!
 
-NOTE: Files in topics that end with *.zsh should be sourced inside your `zsh/zshrc.symlink` file. The bootstrap.sh script will not symlink/source *.zsh files anywhere.
+NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The installer will not symlink `.zsh` files.
 
 ### Special topics:
 
@@ -39,7 +39,7 @@ NOTE: Files in topics that end with *.zsh should be sourced inside your `zsh/zsh
 ### Special execution files:
 
  - topic/config.sh: Any file named config.sh within a topic will be executed when you run bootstrap.sh instead of just symlinking *.symlink files.
- - topic/install.sh: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to pacman.
+ - topic/install.sh: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to apt.
  
 ### Special file types:
 
