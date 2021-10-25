@@ -32,20 +32,20 @@ NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The in
 
 ### Special topics:
 
- - bin/: Anything in bin/ will get added to your $PATH and be made available everywhere.
- - profile/: User profile configurations such as additional $PATH values, ENV vars, aliases, and functions.
- - system/: System wide configurations that are installed with root. 
+ - **bin/**: Anything in bin/ will get added to your $PATH and be made available everywhere.
+ - **profile/**: User profile configurations such as additional $PATH values, ENV vars, aliases, and functions.
+ - **system/**: System wide configurations that are installed with root. 
 
 ### Special execution files:
 
- - topic/config.sh: Any file named config.sh within a topic will be executed after any files matching *.symlinks are symlinked.
- - topic/install.sh: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to apt.
+ - **topic/config.sh**: Any file named config.sh within a topic will be executed after any files matching *.symlinks are symlinked.
+ - **topic/install.sh**: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to apt.
  
 ### Special file types:
 
- - topic/*.zsh: Any files ending in .zsh get loaded into your environment.
- - topic/path.zsh: Any file named path.zsh is loaded first and is expected to setup $PATH or similar.
- - topic/completion.zsh: Any file named completion.zsh is loaded last and is expected to setup autocomplete.
- - topic/topicPkg.list: Contains all the packages related to the topic. Can be a single package.
- - topic/*.symlink: Any file ending in *.symlink gets symlinked into your $HOME. This is so you can keep all of those versioned in your dotfiles but still keep those autoloaded files in your home directory. These get symlinked in when you run bootstrap.sh.
+ - **topic/*.zsh**: Any files ending in .zsh get loaded into your environment.
+ - **topic/path.zsh**: Any file named path.zsh is loaded first and is expected to setup $PATH or similar.
+ - **topic/completion.zsh**: Any file named completion.zsh is loaded last and is expected to setup autocomplete.
+ - **topic/topicPkg.list**: Contains all the packages related to the topic. Can be a single package.
+ - **topic/*.symlink**: Any file ending in *.symlink gets symlinked into your $HOME. This is so you can keep all of those versioned in your dotfiles but still keep those autoloaded files in your home directory. These get symlinked in when you run bootstrap.sh.
 
