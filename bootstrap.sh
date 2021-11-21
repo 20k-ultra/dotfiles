@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-        "$DOTFILES_ROOT/$1/topicPkg.list" xargs sudo apt install -y
+		sudo apt install $(cat "$DOTFILES_ROOT/$1/topicPkg.list") -y
     else
         progress "      No packages to install."
     fi
@@ -122,7 +122,6 @@ link_dotfiles () {
     do
         dst="$HOME/.$(basename "${src%.*}")"
         link_file "$src" "$dst"
-        echo "symlinked $dst -> $src"
     done
 }
 
@@ -158,5 +157,9 @@ for topic in */ ; do
     install_topic ${topic%/}
     configure_topic ${topic%/}
 done
+
+echo "  --- Cleaing up packages ---"
+
+sudo apt autoremove && sudo apt clean
 
 echo "  --- System is ready ---"

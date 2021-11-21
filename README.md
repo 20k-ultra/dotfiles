@@ -7,7 +7,8 @@ This repository is for my X1E laptop running Debian.
 On a freshly provisioned Debian system you just need to install git:
 
 ```
-apt install git
+sudo apt update
+sudo apt install git
 ```
 
 ## Setup
