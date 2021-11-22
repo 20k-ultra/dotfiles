@@ -160,6 +160,6 @@ done
 
 echo "  --- Cleaing up packages ---"
 
-sudo apt autoremove && sudo apt clean
+sudo apt autoremove -y && sudo apt clean
 
 echo "  --- System is ready ---"
