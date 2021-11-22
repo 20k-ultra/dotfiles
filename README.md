@@ -4,7 +4,13 @@ This repository is for my X1E laptop running Debian.
 
 ## Prerequisites
 
-On a freshly provisioned Debian system you just need to install git:
+On a freshly provisioned Debian system add your user to the sudo group:
+
+```
+usermod -aG sudo <user>
+```
+
+then install git:
 
 ```
 sudo apt update
