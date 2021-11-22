@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-		sudo apt install $(cat "$DOTFILES_ROOT/$1/topicPkg.list") -y
+		sudo apt install $(cat "$DOTFILES_ROOT/$1/topicPkg.list") -yq
     else
         progress "      No packages to install."
     fi
@@ -150,7 +150,7 @@ configure_topic() {
     fi 
 }
 
-sudo apt update && sudo apt upgrade -y
+sudo apt update -q && sudo apt upgrade -yq
 
 for topic in */ ; do
     info "Found ${topic%/} topic!"
@@ -160,6 +160,6 @@ done
 
 echo "  --- Cleaing up packages ---"
 
-sudo apt autoremove -y && sudo apt clean
+sudo apt autoremove -yq && sudo apt clean -q
 
 echo "  --- System is ready ---"
