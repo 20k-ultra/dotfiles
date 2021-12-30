@@ -159,8 +159,4 @@ for topic in */ ; do
     configure_topic ${topic%/}
 done
 
-echo "  --- Remove package dependencies ---"
-
-paru -c
-
 echo "  --- System is ready ---"
