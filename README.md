@@ -1,21 +1,18 @@
 # dotfiles
 
-This repository is for my X1E laptop running Debian. 
+This repository is for my X1E laptop running Arch. 
 
 ## Prerequisites
 
-On a freshly provisioned Debian system add your user to the sudo group:
+Go through the minimum setup post install found [here](post_install.md).
+
+Now with user management out of the way, and logged in as your privileged user, install git: 
 
 ```
-usermod -aG sudo <user>
+sudo pacman -Syu git
 ```
 
-then install git:
-
-```
-sudo apt update
-sudo apt install git
-```
+Finally, this repo uses [Paru](https://github.com/Morganamilo/paru) for installing AUR packages. Follow the Paru repo for [installation](https://github.com/Morganamilo/paru#installation).
 
 ## Setup
 
@@ -35,7 +32,7 @@ This will go into each topic and install the packages and configure them by syml
 
 Each folder is a **topic** with several special files that will be processed differently when the bootstrap script runs.
 
-The bootstrap.sh script just iterates over the topics and installs their packages via apt and then symlinks files into your $HOME directory. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files) if the topic requires more then just symlinking!
+The bootstrap.sh script just iterates over the topics and installs their packages via paru and then symlinks files into your $HOME directory. See [Special file types](#special-file-types) for more. Additional install/configure overrides can be seen at [Special execution files](#special-execution-files) if the topic requires more then just symlinking!
 
 > NOTE: Files in topics that end with *.zsh are sourced in zsh/zsh.symlink. The installer will not symlink `.zsh` files.
 
@@ -48,7 +45,7 @@ The bootstrap.sh script just iterates over the topics and installs their package
 ### Special execution files:
 
  - **topic/config.sh**: Any file named config.sh within a topic will be executed after any files matching *.symlinks are symlinked.
- - **topic/install.sh**: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to apt.
+ - **topic/install.sh**: Any file named install.sh within a topic will be executed when you run bootstrap.sh instead of just passing a topicPkg.list to paru.
  
 ### Special file types:
 

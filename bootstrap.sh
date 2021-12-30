@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# bootstrap.sh will go into each topic and pass the topicPkg.list file to apt to be downloaded and installed. 
+# bootstrap.sh will go into each topic and pass the topicPkg.list file to paru to be downloaded and installed. 
 # After that any *smylink will be symlinked.
 #
 # If a topic has an install.sh or config.sh then those will be ran instead of the generic install/link.
@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-		sudo apt install $(cat "$DOTFILES_ROOT/$1/topicPkg.list") -yq
+		sudo paru -Sq $(cat "$DOTFILES_ROOT/$1/topicPkg.list")
     else
         progress "      No packages to install."
     fi
@@ -150,7 +150,8 @@ configure_topic() {
     fi 
 }
 
-sudo apt update -q && sudo apt upgrade -yq
+# Update packages
+sudo paru
 
 for topic in */ ; do
     info "Found ${topic%/} topic!"
@@ -158,8 +159,8 @@ for topic in */ ; do
     configure_topic ${topic%/}
 done
 
-echo "  --- Cleaing up packages ---"
+echo "  --- Remove package dependencies ---"
 
-sudo apt autoremove -yq && sudo apt clean -q
+sudo paru -c
 
 echo "  --- System is ready ---"
