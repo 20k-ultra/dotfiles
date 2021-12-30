@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-		sudo paru -Sq $(cat "$DOTFILES_ROOT/$1/topicPkg.list")
+		sudo paru -Sq --needed $(cat "$DOTFILES_ROOT/$1/topicPkg.list")
     else
         progress "      No packages to install."
     fi
