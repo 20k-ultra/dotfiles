@@ -107,7 +107,7 @@ link_file () {
 install_packages () {
     progress "      Installing $1 packages."
     if [[ $(cat "$DOTFILES_ROOT/$1/topicPkg.list" | wc -l) > 0 ]]; then
-		sudo paru -Sq --needed $(cat "$DOTFILES_ROOT/$1/topicPkg.list")
+		paru -Sq --needed $(cat "$DOTFILES_ROOT/$1/topicPkg.list")
     else
         progress "      No packages to install."
     fi
@@ -151,7 +151,7 @@ configure_topic() {
 }
 
 # Update packages
-sudo paru
+paru
 
 for topic in */ ; do
     info "Found ${topic%/} topic!"
@@ -161,6 +161,6 @@ done
 
 echo "  --- Remove package dependencies ---"
 
-sudo paru -c
+paru -c
 
 echo "  --- System is ready ---"
