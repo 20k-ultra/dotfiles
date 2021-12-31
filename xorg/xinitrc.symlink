@@ -34,4 +34,6 @@ fi
 
 twm &
 xbindkeys &
+slstatus &
+feh --bg-scale ~/dotfiles/zdwm/bg.jpg &
 exec dwm

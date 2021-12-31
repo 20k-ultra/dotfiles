@@ -11,6 +11,6 @@ sudo make clean install
 
 cd -
 
+# Install feh for setting background but gets applied in xinitrc
 sudo paru -S --needed feh
 
-feh --bg-scale ~/dotfiles/zdwm/bg.jpg
