@@ -17,3 +17,11 @@
 # Mute microphone
 "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     XF86AudioMicMute
+
+# Increase screen brightness by 5% 
+"light -A 5"
+    XF86MonBrightnessUp
+
+# Decrease screen brightness by 5% 
+"light -U 5"
+    XF86MonBrightnessDown 
