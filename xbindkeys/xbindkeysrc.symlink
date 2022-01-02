@@ -18,12 +18,12 @@
 "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     XF86AudioMicMute
 
-# Increase screen brightness by 5% 
-"light -A 5"
+# Increase screen brightness by 10% 
+"light -A 10"
     XF86MonBrightnessUp
 
-# Decrease screen brightness by 5% 
-"light -U 5"
+# Decrease screen brightness by 10% 
+"light -U 10"
     XF86MonBrightnessDown 
 
 # Trigger maim to take screenshot of region and copy to clipboard 
