@@ -25,3 +25,7 @@
 # Decrease screen brightness by 5% 
 "light -U 5"
     XF86MonBrightnessDown 
+
+# Trigger maim to take screenshot of region and copy to clipboard 
+"maim -s | xclip -selection clipboard -t image/png"
+    Control+shift + s 
