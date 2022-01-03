@@ -11,6 +11,8 @@ sudo make clean install
 
 cd -
 
-# Install feh for setting background but gets applied in xinitrc
-sudo paru -S --needed feh
+# Install other useful things for making stuff pretty
+paru -S --needed pywal-git
 
+# Generate pywal theme
+wal -i ~/dotfiles/dwm/bg.jpg
