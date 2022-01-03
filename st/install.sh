@@ -1,7 +1,7 @@
 
 cd ~/
 
-git clone git://git.suckless.org/st
+git clone https://github.com/LukeSmithxyz/st
 
 cd st
 
