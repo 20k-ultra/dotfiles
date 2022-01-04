@@ -19,6 +19,10 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-rls', {'branch': 'release'}
 
+" Fuzzy finding
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 " Initialize plugin system
 call plug#end()
 
