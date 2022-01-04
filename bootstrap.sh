@@ -150,6 +150,10 @@ configure_topic() {
     fi 
 }
 
+# Ensure exectuable file exists in $HOME
+
+mkdir -p $HOME/.local/bin
+
 # Update packages
 paru
 
