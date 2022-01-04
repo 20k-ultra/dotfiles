@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# bootstrap.sh will go into each topic and pass the topicPkg.list file to paru to be downloaded and installed. 
+# apply.sh will go into each topic and pass the topicPkg.list file to paru to be downloaded and installed. 
 # After that any *smylink will be symlinked.
 #
 # If a topic has an install.sh or config.sh then those will be ran instead of the generic install/link.
@@ -9,7 +9,7 @@ DOTFILES_ROOT=$(pwd -P)
 
 set -e
 
-echo "  --- Bootstrapping system ---"
+echo "  --- Modifying system ---"
 
 info () {
     printf "\r  [ \033[00;34mINFO\033[0m ] $1\n"
