@@ -28,9 +28,8 @@ antigen init ~/.antigenrc
 . ~/.alias
 
 # Source any zsh files in dotfiles 
-typeset -U config_files
-config_files=($ZSH/**/*.zsh)
-for file in ${(M)config_files:#*/path.zsh}
-do
+for file in $ZSH/**/*.zsh; do
+	[ -f "$file" ] || break
 	source $file
 done
+
