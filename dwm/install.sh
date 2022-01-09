@@ -7,6 +7,9 @@ cd dwm
 
 ln -sf ~/dotfiles/dwm/config.h ~/dwm
 
+# Apply patch
+patch -p1 < ~/dotfiles/dwm/dwm-attachbottom-6.2.diff
+
 sudo make clean install
 
 cd -
