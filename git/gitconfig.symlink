@@ -1,3 +1,5 @@
+[core]
+	editor = $EDITOR
 [user]
 	email = 3946250+20k-ultra@users.noreply.github.com 
 	name = 20k-ultra
