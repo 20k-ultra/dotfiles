@@ -37,4 +37,5 @@ twm &
 xbindkeys &
 slstatus &
 wal -R &
+unclutter -grab &
 exec dwm
