@@ -2,6 +2,8 @@
 
 This repository is for my X1E laptop running Arch. 
 
+![Typical layout](screenshot.jpeg)
+
 ## Prerequisites
 
 Go through the minimum setup post install found [here](post_install.md).
