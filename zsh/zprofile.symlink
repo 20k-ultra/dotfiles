@@ -3,3 +3,4 @@ export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export XDG_CONFIG_HOME="$HOME/.config"
