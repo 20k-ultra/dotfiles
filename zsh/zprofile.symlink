@@ -1,4 +1,4 @@
-export PATH=${PATH}:"${HOME}/.local/bin"
+export PATH=${PATH}:"${HOME}/.local/bin":"${HOME}/.cargo/bin"
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
 export VISUAL=vim
