@@ -58,7 +58,18 @@ local config = {
     -- Set options
     set.relativenumber = false
     set.mouse = ""
-
+    set.list = true
+    set.listchars = {
+      tab = "│→",
+      extends = "⟩",
+      precedes = "⟨",
+      trail = "·",
+      nbsp = "␣",
+    }
+    set.showbreak = "↪ "
+    set.wrap = true
+    set.linebreak = true
+    --
     -- Set key bindings
     map("n", "<C-s>", ":w!<CR>", opts)
 
