@@ -15,9 +15,3 @@ patch -p1 < ~/dotfiles/dwm/dwm-centeredmaster-6.1.diff
 sudo make clean install
 
 cd -
-
-# Install other useful things for making stuff pretty
-paru -S --needed pywal-git
-
-# Generate pywal theme
-wal -i ~/dotfiles/dwm/bg.jpg
