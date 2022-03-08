@@ -57,6 +57,7 @@ local config = {
 
 		-- Set options
 		set.relativenumber = false
+		set.mouse = ""
 
 		-- Set key bindings
 		map("n", "<C-s>", ":w!<CR>", opts)
