@@ -1,6 +1,6 @@
 export PATH=${PATH}:"${HOME}/.local/bin":"${HOME}/.cargo/bin"
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 export XDG_CONFIG_HOME="$HOME/.config"
