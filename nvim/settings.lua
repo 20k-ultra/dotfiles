@@ -2,6 +2,7 @@ local config = {
 
 	-- Add plugins
 	plugins = {
+    { "ellisonleao/glow.nvim" },
 		{ "simrat39/rust-tools.nvim" },
 		{
 			"20k-ultra/sonokai",
