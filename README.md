@@ -2,7 +2,7 @@
 
 This repository is for my X1E laptop running Arch. Optimized for functionality not form...but things that work well tend to look cool without trying xD 
 
-![Typical layout](screenshot.jpeg)
+![Typical layout](editor.png)
 
 This configuration is really comfy with my LG 38WK95C monitor. I no longer use a mouse though.. See [this](https://github.com/20k-ultra/dotfiles/commit/6a9c82b97514a38e00fc5ccff2086efa6d0be3d6) commit.
 
