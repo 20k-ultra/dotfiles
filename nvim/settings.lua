@@ -43,7 +43,7 @@ local config = {
     indent_blankline = true,
     dashboard = true,
     which_key = true,
-    neoscroll = true,
+    neoscroll = false,
     ts_rainbow = true,
     ts_autotag = true,
   },
