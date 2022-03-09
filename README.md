@@ -1,12 +1,10 @@
 # dotfiles
 
-This repository is for my X1E laptop running Arch. 
-
 ![Typical layout](editor.png)
 
-This configuration works great with my LG 38WK95C monitor. 
-
 ![Desk Setup](desk.jpeg)
+
+> Desk setup with LG 38WK95C monitor
 
 ## Prerequisites
 
