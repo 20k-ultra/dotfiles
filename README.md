@@ -1,18 +1,18 @@
 # dotfiles
 
-This repository is for my X1E laptop running Arch. Optimized for functionality not form...but things that work well tend to look cool without trying xD 
+This repository is for my X1E laptop running Arch. 
 
 ![Typical layout](editor.png)
 
-This configuration is really comfy with my LG 38WK95C monitor. I no longer use a mouse though.. See [this](https://github.com/20k-ultra/dotfiles/commit/6a9c82b97514a38e00fc5ccff2086efa6d0be3d6) commit.
+This configuration works great with my LG 38WK95C monitor. 
 
 ![Desk Setup](desk.jpeg)
 
 ## Prerequisites
 
-Go through the minimum setup post install found [here](post_install.md).
+Go through the minimum setup post-install found [here](post_install.md).
 
-Now with user management out of the way, and logged in as your privileged user, install git: 
+Now that you are logged in as your newly created privileged user, install git:
 
 ```
 sudo pacman -Syu git
@@ -63,4 +63,4 @@ The apply.sh script just iterates over the topics and installs their packages vi
 
 ## Design Inspiration
 
-Repo is inspired by https://github.com/holman/dotfiles approach to dotfile management by seperating software into topics and defining common interfaces to installing and configuring them. 
+Repo is inspired by https://github.com/holman/dotfiles approach to dotfile management by separating software into topics and defining common interfaces to installing and configuring them. 
