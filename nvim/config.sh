@@ -1,6 +1,7 @@
-#/bin/sh
+#!/bin/sh
 
 git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
-nvim +PackerSync
 
-ln -sf ~/dotfiles/nvim/settings.lua ~/.config/nvim/lua/user
+mkdir ~/.config/nvim/lua/user
+ln -sf ~/dotfiles/nvim/init.lua ~/.config/nvim/lua/user
+nvim +PackerSync
