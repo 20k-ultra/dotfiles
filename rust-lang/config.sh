@@ -10,3 +10,6 @@ rustup toolchain install $VERSION
 
 # Test install
 rustc -V
+
+# Install necessary tools
+cargo install sccache
