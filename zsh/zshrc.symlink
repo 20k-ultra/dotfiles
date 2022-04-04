@@ -33,3 +33,4 @@ for file in $ZSH/**/*.zsh; do
 	source $file
 done
 
+rmbrs todos
