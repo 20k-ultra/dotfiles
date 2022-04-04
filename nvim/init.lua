@@ -1,5 +1,7 @@
 local config = {
   -- Set colorscheme
+  -- TODO use plugin config function to set this value
+  vim.api.nvim_set_var("sonokai_style", "20k-ultra"),
   colorscheme = "sonokai",
 
   -- Add plugins
@@ -7,12 +9,7 @@ local config = {
     init = {
       { "ellisonleao/glow.nvim" },
       { "simrat39/rust-tools.nvim" },
-      {
-        "20k-ultra/sonokai",
-        config = function()
-          vim.api.nvim_set_var("sonokai_style", "20k-ultra")
-        end,
-      },
+      { "20k-ultra/sonokai" },
     },
     treesitter = {
       ensure_installed = { "lua" },
