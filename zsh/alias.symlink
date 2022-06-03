@@ -1,2 +1,3 @@
 # Setup aliases
 alias ls='ls --color=auto'
+alias gpm='git pull origin master'
