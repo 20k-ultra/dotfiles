@@ -3,7 +3,6 @@ local config = {
   plugins = {
     init = {
       { "ellisonleao/glow.nvim" },
-      { "simrat39/rust-tools.nvim" },
       {
         "20k-ultra/sonokai",
         config = function()
@@ -25,26 +24,6 @@ local config = {
     packer = {
       compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     },
-  },
-
-  lsp = {
-    server_registration = function(server, server_opts)
-      local new_opts = {
-        load_prefillCaches = false,
-      }
-
-      if server.name == "rust_analyzer" then
-        -- Initialize the LSP via rust-tools instead
-        require("rust-tools").setup {
-          server = vim.tbl_deep_extend("force", server_opts, new_opts),
-        }
-        server:attach_buffers()
-        -- Only if standalone support is needed
-        require("rust-tools").start_standalone_if_required()
-      else
-        server:setup(server_opts)
-      end
-    end,
   },
 
   diagnostics = {
