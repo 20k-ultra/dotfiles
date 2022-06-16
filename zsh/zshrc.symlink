@@ -4,8 +4,11 @@
 # Load nvm
 source /usr/share/nvm/init-nvm.sh
 
-# shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/dotfiles
+# Path to oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
+
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/dotfiles
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -15,11 +18,22 @@ then
 	source ~/.localrc
 fi
 
-# Load Antigen
-source /usr/share/zsh/share/antigen.zsh 
+# Set theme
+ZSH_THEME="alanpeabody"
 
-# Load Antigen configurations
-antigen init ~/.antigenrc
+# Plugins 
+plugins=(
+	git
+	command-not-found
+	docker
+	vi-mode
+	zsh-completions
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+# Source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # Source Bash functions
 . ~/.functions
@@ -28,7 +42,7 @@ antigen init ~/.antigenrc
 . ~/.alias
 
 # Source any zsh files in dotfiles 
-for file in $ZSH/**/*.zsh; do
+for file in $DOTFILES/**/*.zsh; do
 	[ -f "$file" ] || break
 	source $file
 done
