@@ -3,13 +3,7 @@ local config = {
   plugins = {
     init = {
       { "ellisonleao/glow.nvim" },
-      {
-        "20k-ultra/sonokai",
-        config = function()
-          vim.api.nvim_set_var("sonokai_style", "20k-ultra")
-          vim.cmd "colorscheme sonokai"
-        end,
-      },
+      { "20k-ultra/sonokai" },
     },
     treesitter = {
       ensure_installed = { "lua" },
@@ -25,6 +19,8 @@ local config = {
       compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     },
   },
+
+  colorscheme = "sonokai",
 
   diagnostics = {
     virtual_text = true,
@@ -44,7 +40,6 @@ local config = {
     indent_blankline = true,
     dashboard = true,
     which_key = true,
-    neoscroll = false,
     ts_rainbow = true,
     ts_autotag = true,
   },
