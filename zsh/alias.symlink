@@ -2,3 +2,4 @@
 alias ls='ls --color=auto'
 alias gpm='git pull origin master'
 alias gs='git status'
+alias gpom='git pull origin master'
