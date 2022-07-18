@@ -1,6 +1,6 @@
 # Post install steps
 
-These steps are the basic you should perform after provisioning a new Arch machine.
+These steps are the basics you should perform after provisioning a new Arch machine.
 
 ```
 # Install sudo and a basic editor
@@ -23,6 +23,6 @@ su - <user>
 sudo passwd -l root
 ```
 
-Now you have an account setup with the correct privleges and root login disabled.
+Now you have an account setup with the correct privileges and root login disabled.
 
 Continue dotfiles setup in the [README](README.md).
