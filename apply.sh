@@ -142,7 +142,7 @@ configure_topic() {
     if [[ $(find ./$1 -maxdepth 1 -name "*.symlink") ]]; then 
         link_dotfiles $1
     else
-       progress "       No files to link..."
+        progress "       No files to link..."
     fi
 
     if [ -f $1/config.sh ]; then
@@ -150,17 +150,34 @@ configure_topic() {
     fi 
 }
 
-# Ensure exectuable file exists in $HOME
+apply_topic() {
+    install_topic $1
+    configure_topic $1
+}
 
+# Ensure exectuable file exists in $HOME
 mkdir -p $HOME/.local/bin
 
 # Update packages
 paru
 
-for topic in */ ; do
-    info "Found ${topic%/} topic!"
-    install_topic ${topic%/}
-    configure_topic ${topic%/}
-done
+# If a topic was provided than just apply logic for that one
+if [ "$#" -eq  "0" ]
+    then
+    info "Applying all topics..."
+    for topic in */ ; do
+        info "Found ${topic%/} topic!"
+        apply_topic ${topic%/}
+    done
+ else
+    if [ -d $1 ]; then
+        info "Applying $1 topic..."
+        apply_topic $1
+    else
+        info "Did not find $1 topic..."
+        exit 1
+    fi
+fi
+
 
 echo "  --- System is ready ---"
