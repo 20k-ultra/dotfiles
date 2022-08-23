@@ -1,0 +1,13 @@
+#!/bin/env sh
+
+setclip() {
+  xclip -selection c
+}
+
+file=$(mktemp --suffix=.md)
+kitty $EDITOR $file 
+
+setclip <"$file"
+rm "$file"
+
+xdotool key ctrl+v

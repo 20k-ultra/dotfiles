@@ -1,3 +1,7 @@
+# Open tmp file in vim that automatically pastes output 
+"vim_clip"
+    Control+alt + o 
+
 # Open dmenu
 "dmenu_run"
     Mod4+d
