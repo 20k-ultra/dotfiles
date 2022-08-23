@@ -5,3 +5,5 @@
 	name = 20k-ultra
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
