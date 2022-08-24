@@ -4,10 +4,19 @@ setclip() {
   xclip -selection c
 }
 
+getclip() {
+  xclip -o -selection c
+}
+
+# Create a tmp file to work on
 file=$(mktemp --suffix=.md)
+# Paste clipboard contents to file
+getclip > $file
+# Open tmp file with system $EDITOR
 kitty $EDITOR $file 
-
+# Output contents of the tmp file to clipboard
 setclip <"$file"
+# Cleanup tmp file
 rm "$file"
-
+# Paste tmp file to active input
 xdotool key ctrl+v
