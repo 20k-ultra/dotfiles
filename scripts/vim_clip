@@ -13,7 +13,7 @@ file=$(mktemp --suffix=.md)
 # Paste clipboard contents to file
 getclip > $file
 # Open tmp file with system $EDITOR
-kitty $EDITOR $file 
+$TERMINAL $EDITOR $file 
 # Output contents of the tmp file to clipboard
 setclip <"$file"
 # Cleanup tmp file
