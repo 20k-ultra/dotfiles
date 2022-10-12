@@ -74,7 +74,7 @@ local config = {
     local set = vim.opt
 
     -- Set options
-    set.relativenumber = false
+    set.relativenumber = true 
     set.mouse = ""
     set.list = false
     set.listchars = {
