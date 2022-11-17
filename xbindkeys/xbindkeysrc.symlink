@@ -1,3 +1,7 @@
+# Load detected X config 
+"autorandr --change"
+    Control+alt + q 
+
 # Open tmp file in vim that automatically pastes output 
 "vim_clip"
     Control+alt + o 

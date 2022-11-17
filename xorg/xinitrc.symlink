@@ -39,4 +39,5 @@ slstatus &
 wal -R &
 unclutter -grab &
 xinput set-prop "Synaptics TM3512-010" "Device Enabled" 0 &
+autorandr --change
 exec dwm
