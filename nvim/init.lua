@@ -31,6 +31,8 @@ local config = {
         "bashls",
         "sumneko_lua",
         "tsserver",
+        "jsonls",
+        "pyright",
       },
     },
     ["mason-null-ls"] = {
