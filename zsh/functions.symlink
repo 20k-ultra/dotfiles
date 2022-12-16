@@ -1,3 +1,7 @@
+mkgo() {
+    mkdir "$1" && cd "$1"
+}
+
 balena-login() {
     unset AWS_PROFILE
     docker run -it -v ~/.aws:/root/.aws cevoaustralia/aws-google-auth -p $1
