@@ -1,3 +1,39 @@
+note() {
+    # Set the EDITOR environment variable to your preferred text editor
+    EDITOR=${EDITOR:-vi}
+
+    # Set the NOTES_DIR environment variable to the directory where notes should be saved
+    NOTES_DIR=${NOTES_DIR:-~/notes}
+
+    # Set the file type for notes (so that the editor LSP can work)
+    NOTES_TYPE=${NOTES_TYPE:-".MD"}
+
+    # Check if the NOTES_DIR folder exists
+    if [ ! -d "$NOTES_DIR" ]
+    then
+        # If the folder does not exist, create it
+        mkdir "$NOTES_DIR"
+    fi
+
+    if [ -z "$1" ]; then
+	    # If no filename is provided, create a new file with a timestamp in the name
+	    filename="note-$(date +'%Y-%m-%d_%H-%M-%S')"
+    else
+	    # Use the provided filename
+	    filename="$1"
+    fi
+
+    # Open the file in the text editor
+    $EDITOR "$NOTES_DIR/$filename$NOTES_TYPE"
+}
+
+notes() {
+    # Set the NOTES_DIR environment variable to the directory where notes should be saved
+    NOTES_DIR=${NOTES_DIR:-~/notes}
+
+    ls -lt "$NOTES_DIR" | awk '{print $6, $7, $8, $9}' | awk NF
+}
+
 mkgo() {
     mkdir "$1" && cd "$1"
 }
