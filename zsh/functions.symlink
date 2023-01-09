@@ -31,7 +31,27 @@ notes() {
     # Set the NOTES_DIR environment variable to the directory where notes should be saved
     NOTES_DIR=${NOTES_DIR:-~/notes}
 
-    ls -lt "$NOTES_DIR" | awk '{print $6, $7, $8, $9}' | awk NF
+	# Set the internal field separator to a newline character
+	# so that we can loop through the output of 'ls' line by line
+	IFS=$'\n'
+
+	# Print the table header
+	printf "+-------------------------------------+----------------+\n"
+	printf "|                 Note                |      Date      |\n"
+	printf "+-------------------------------------+----------------+\n"
+
+	# Loop through the output of 'ls'
+	ls -tl "$NOTES_DIR" | tail -n +2 | while read -r line; do
+		# Extract the file name and date from the line
+		file=$(echo "$line" | awk '{print $9}')
+		date=$(echo "$line" | awk '{print $6, $7, $8}')
+
+		# Print the file name and date in a table row
+		printf "| %-35s | %-15s|\n" "$file" "$date"
+	done
+
+	# Print the table footer
+	printf "+-------------------------------------+----------------+\n"
 }
 
 mkgo() {
