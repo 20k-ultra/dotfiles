@@ -1,3 +1,7 @@
+timed_curl() {
+    curl -w "@$CURL_TIMED_FORMAT" -o /dev/null -s $1
+}
+
 note() {
     # Set the EDITOR environment variable to your preferred text editor
     EDITOR=${EDITOR:-vi}
