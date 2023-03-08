@@ -1,14 +1,28 @@
 return {
   colorscheme = "sonokai",
-
   -- TODO REMOVE AFTER v3 RELEASE
   updater = { channel = "nightly" },
-
+  mappings = {
+    n = {
+      ["<S-l>"] = {
+        function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+        desc = "Next buffer",
+      },
+      ["<S-h>"] = {
+        function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+        desc = "Previous buffer",
+      },
+    },
+  },
   -- Add plugins
   plugins = {
+    "AstroNvim/astrocommunity",
+    { import = "astrocommunity.pack.rust" },
     { "20k-ultra/sonokai" },
-    { "ellisonleao/glow.nvim", cmd = "Glow" },
-
+    {
+      "PratikBhusal/vim-grip",
+      event = "VeryLazy",
+    },
     {
       "rebelot/heirline.nvim",
       opts = function(_, opts)
@@ -25,7 +39,6 @@ return {
           "javascript",
           "lua",
           "markdown",
-          "rust",
           "tsx",
           "typescript",
         },
@@ -39,7 +52,6 @@ return {
           "jsonls",
           "lua_ls",
           "pyright",
-          "rust_analyzer",
           "tsserver",
         },
       },
@@ -56,7 +68,6 @@ return {
       },
     },
   },
-
   options = {
     opt = {
       mouse = "",
