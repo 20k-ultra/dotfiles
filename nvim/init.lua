@@ -1,46 +1,58 @@
-local config = {
+return {
   colorscheme = "sonokai",
+
+  -- TODO REMOVE AFTER v3 RELEASE
+  updater = { channel = "nightly" },
 
   -- Add plugins
   plugins = {
-    init = {
-      { "ellisonleao/glow.nvim" },
-      { "20k-ultra/sonokai" },
+    { "20k-ultra/sonokai" },
+    { "ellisonleao/glow.nvim", cmd = "Glow" },
+
+    {
+      "rebelot/heirline.nvim",
+      opts = function(_, opts)
+        local status = require "astronvim.utils.status"
+        opts.tabline[2] = status.heirline.make_buflist(status.component.tabline_file_info { close_button = false })
+        return opts
+      end,
     },
-    treesitter = {
-      ensure_installed = {
-        "lua",
-        "rust",
-        "typescript",
-        "javascript",
-        "tsx",
-        "bash",
-        "markdown",
+    {
+      "nvim-treesitter/nvim-treesitter",
+      opts = {
+        ensure_installed = {
+          "bash",
+          "javascript",
+          "lua",
+          "markdown",
+          "rust",
+          "tsx",
+          "typescript",
+        },
       },
     },
-    bufferline = {
-      options = {
-        show_buffer_close_icons = false,
-        show_buffer_icons = false,
-        show_close_icon = false,
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = {
+          "bashls",
+          "jsonls",
+          "lua_ls",
+          "pyright",
+          "rust_analyzer",
+          "tsserver",
+        },
       },
     },
-    ["mason-lspconfig"] = {
-      ensure_installed = {
-        "rust_analyzer",
-        "bashls",
-        "sumneko_lua",
-        "tsserver",
-        "jsonls",
-        "pyright",
-      },
-    },
-    ["mason-null-ls"] = {
-      ensure_installed = {
-        "shellcheck",
-        "shfmt",
-        "prettier",
-        "stylua",
+    {
+      "jay-babu/mason-null-ls.nvim",
+      opts = {
+        ensure_installed = {
+          "prettier",
+          "shellcheck",
+          "shfmt",
+          "stylua",
+        },
       },
     },
   },
@@ -62,5 +74,3 @@ local config = {
     },
   },
 }
-
-return config
