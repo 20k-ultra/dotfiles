@@ -39,14 +39,7 @@ return {
         },
       },
     },
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = {
-          "jsonls",
-        },
-      },
-    },
+    { import = "astrocommunity.pack.json" },
     { import = "astrocommunity.pack.lua" },
     { import = "astrocommunity.pack.bash" },
     { import = "astrocommunity.pack.rust" },
