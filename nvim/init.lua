@@ -17,7 +17,6 @@ return {
   -- Add plugins
   plugins = {
     "AstroNvim/astrocommunity",
-    { import = "astrocommunity.pack.rust" },
     { "20k-ultra/sonokai" },
     {
       "PratikBhusal/vim-grip",
@@ -36,11 +35,9 @@ return {
       opts = {
         ensure_installed = {
           "bash",
-          "javascript",
           "lua",
           "markdown",
           "tsx",
-          "typescript",
         },
       },
     },
@@ -51,8 +48,6 @@ return {
           "bashls",
           "jsonls",
           "lua_ls",
-          "pyright",
-          "tsserver",
         },
       },
     },
@@ -60,13 +55,15 @@ return {
       "jay-babu/mason-null-ls.nvim",
       opts = {
         ensure_installed = {
-          "prettier",
           "shellcheck",
           "shfmt",
           "stylua",
         },
       },
     },
+    { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.pack.python" },
+    { import = "astrocommunity.pack.typescript" },
   },
   options = {
     opt = {
