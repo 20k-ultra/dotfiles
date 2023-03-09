@@ -30,14 +30,7 @@ return {
         return opts
       end,
     },
-    {
-      "nvim-treesitter/nvim-treesitter",
-      opts = {
-        ensure_installed = {
-          "markdown",
-        },
-      },
-    },
+    { import = "astrocommunity.pack.markdown" },
     { import = "astrocommunity.pack.json" },
     { import = "astrocommunity.pack.lua" },
     { import = "astrocommunity.pack.bash" },
