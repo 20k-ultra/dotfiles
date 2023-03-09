@@ -34,7 +34,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
       opts = {
         ensure_installed = {
-          "lua",
           "markdown",
           "tsx",
         },
@@ -45,18 +44,10 @@ return {
       opts = {
         ensure_installed = {
           "jsonls",
-          "lua_ls",
         },
       },
     },
-    {
-      "jay-babu/mason-null-ls.nvim",
-      opts = {
-        ensure_installed = {
-          "stylua",
-        },
-      },
-    },
+    { import = "astrocommunity.pack.lua" },
     { import = "astrocommunity.pack.bash" },
     { import = "astrocommunity.pack.rust" },
     { import = "astrocommunity.pack.python" },
