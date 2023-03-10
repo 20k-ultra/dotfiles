@@ -10,7 +10,7 @@ note() {
     NOTES_DIR=${NOTES_DIR:-~/notes}
 
     # Set the file type for notes (so that the editor LSP can work)
-    NOTES_TYPE=${NOTES_TYPE:-".MD"}
+    NOTES_TYPE=${NOTES_TYPE:-".md"}
 
     # Check if the NOTES_DIR folder exists
     if [ ! -d "$NOTES_DIR" ]
