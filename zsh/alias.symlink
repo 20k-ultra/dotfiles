@@ -1,7 +1,9 @@
 # Setup aliases
 alias ls='ls --color=auto'
 alias gpm='git pull origin main'
-alias gs='git status'
 alias gpom='git pull origin main'
+alias gs='git status'
 alias gcm='git checkout main'
 alias gf='git fetch'
+alias gca="git commit --amend"
+alias gpf="git push -f"
