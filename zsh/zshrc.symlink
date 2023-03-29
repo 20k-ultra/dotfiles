@@ -26,7 +26,8 @@ plugins=(
 	git
 	command-not-found
 	docker
-	vi-mode
+	zsh-vi-mode
+	# vi-mode
 	zsh-completions
 	zsh-autosuggestions
 	zsh-syntax-highlighting
