@@ -23,3 +23,7 @@ fi
 if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-completions" ]; then
 	git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/plugins/zsh-completions
 fi
+
+if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-vi-mode" ]; then
+	git clone https://github.com/jeffreytse/zsh-vi-mode ~/.oh-my-zsh/plugins/zsh-vi-mode
+fi
