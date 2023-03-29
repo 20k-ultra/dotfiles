@@ -13,5 +13,5 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 export RUSTC_WRAPPER=sccache
 export _JAVA_AWT_WM_NONREPARENTING=1
 export IDEA_JDK=/usr/bin/java
-export TERMINAL=kitty
+export TERMINAL=wezterm
 export CURL_TIMED_FORMAT="$HOME/.curl_timed_format"
