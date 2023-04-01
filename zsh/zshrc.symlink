@@ -4,9 +4,6 @@
 # Load nvm
 source /usr/share/nvm/init-nvm.sh
 
-# Path to oh-my-zsh installation
-export ZSH="$HOME/.oh-my-zsh"
-
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/dotfiles
 
@@ -21,21 +18,6 @@ fi
 # Set theme
 ZSH_THEME="alanpeabody"
 
-# Plugins 
-plugins=(
-	git
-	command-not-found
-	docker
-	zsh-vi-mode
-	# vi-mode
-	zsh-completions
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-
-# Source oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # Source Bash functions
 . ~/.functions
 
@@ -47,5 +29,11 @@ for file in $DOTFILES/**/*.zsh; do
 	[ -f "$file" ] || break
 	source $file
 done
+
+# source antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+# initialize plugins 
+antidote load
 
 rmbrs todos
