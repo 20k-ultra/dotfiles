@@ -34,7 +34,7 @@ return {
         return opts
       end,
     },
-    { "williamboman/mason.nvim",                opts = { PATH = "append" } },
+    { "williamboman/mason.nvim", opts = { PATH = "append" } },
     { import = "astrocommunity.pack.go" },
     { import = "astrocommunity.pack.prisma" },
     { import = "astrocommunity.pack.markdown" },
