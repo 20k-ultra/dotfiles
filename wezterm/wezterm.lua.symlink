@@ -9,6 +9,7 @@ end
 -- Theme + Font
 config.color_scheme = "Sonokai (Gogh)"
 config.font_size = 20.0
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.colors = {
 	background = "#1B1D1E",
 }
