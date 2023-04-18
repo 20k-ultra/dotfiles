@@ -21,14 +21,14 @@ note() {
 
     if [ -z "$1" ]; then
 	    # If no filename is provided, create a new file with a timestamp in the name
-	    filename="note-$(date +'%Y-%m-%d_%H-%M-%S')"
+	    filename="note-$(date +'%Y-%m-%d_%H-%M-%S')$NOTES_TYPE"
     else
 	    # Use the provided filename
 	    filename="$1"
     fi
 
     # Open the file in the text editor
-    $EDITOR "$NOTES_DIR/$filename$NOTES_TYPE"
+    $EDITOR "$NOTES_DIR/$filename"
 }
 
 notes() {
