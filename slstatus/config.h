@@ -72,5 +72,5 @@ static const struct arg args[] = {
 	{ run_command, "[ %s°C]",     "sensors | awk '/CPU:/ {print int($2)}'" },
 	{ cpu_perc,    "[CPU %s%%]",    NULL },
 	{ ram_perc,    "[RAM %s%%]",    NULL },
-	{ datetime,    "%s",             "%a%b%d%r" },
+	{ datetime,    "%s",             "%a %b %d %r" },
 };
