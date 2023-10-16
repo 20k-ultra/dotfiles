@@ -1,4 +1,5 @@
 # Setup aliases
+alias railway-local='RAILWAY_ENV=develop railway-latest'
 alias ls='ls --color=auto'
 alias gpm='git pull origin main'
 alias gpom='git pull origin main'

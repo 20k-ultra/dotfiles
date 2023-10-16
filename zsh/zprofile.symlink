@@ -1,3 +1,4 @@
+export ZDOTDIR=~/.config/zsh
 export PNPM_HOME="/home/mig/.local/share/pnpm"
 export FLYCTL_INSTALL="/home/mig/.fly"
 export PATH=${PATH}:"${HOME}/.local/bin":"${HOME}/.cargo/bin":"${HOME}/.deno/bin":"$FLYCTL_INSTALL/bin":"$PNPM_HOME"
