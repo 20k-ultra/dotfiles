@@ -1,25 +1,29 @@
 return {
   colorscheme = "sonokai",
-  -- TODO REMOVE AFTER v3 RELEASE
-  updater = { channel = "nightly" },
   mappings = {
     n = {
       ["<S-l>"] = {
-        function()
-          require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1)
-        end,
+        function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
         desc = "Next buffer",
       },
       ["<S-h>"] = {
-        function()
-          require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1))
-        end,
+        function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
         desc = "Previous buffer",
+      },
+    },
+  },
+  lsp = {
+    config = {
+      clangd = {
+        capabilities = {
+          offsetEncoding = "utf-8",
+        },
       },
     },
   },
   -- Add plugins
   plugins = {
+    -- { "AstroNvim/astrocommunity", dev = true },
     "AstroNvim/astrocommunity",
     { "20k-ultra/sonokai" },
     {
@@ -35,15 +39,19 @@ return {
       end,
     },
     { "williamboman/mason.nvim", opts = { PATH = "append" } },
-    { import = "astrocommunity.pack.go" },
+    { import = "astrocommunity.pack.cpp" },
+    { import = "astrocommunity.pack.proto" },
+    { import = "astrocommunity.pack.ansible" },
     { import = "astrocommunity.pack.prisma" },
     { import = "astrocommunity.pack.markdown" },
+    { import = "astrocommunity.pack.go" },
     { import = "astrocommunity.pack.json" },
+    { import = "astrocommunity.pack.terraform" },
     { import = "astrocommunity.pack.lua" },
-    { import = "astrocommunity.pack.bash" },
     { import = "astrocommunity.pack.rust" },
     { import = "astrocommunity.pack.python" },
     { import = "astrocommunity.pack.typescript" },
+    { import = "astrocommunity.pack.bash" },
   },
   options = {
     opt = {
