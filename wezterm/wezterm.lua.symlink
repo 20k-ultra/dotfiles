@@ -1,24 +1,24 @@
--- Pull in the wezterm API
 local wezterm = require("wezterm")
 
--- This table will hold the configuration.
 local config = {}
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- Theme + Font
 config.color_scheme = "Sonokai (Gogh)"
-config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
-config.font_size = 20
+config.font_size = 20.0
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.colors = {
 	background = "#1B1D1E",
 }
-
-config.text_background_opacity = 0.9
+-- Background
+config.window_background_opacity = 0.9
+config.text_background_opacity = 0.4
+-- Hide tabs
 config.hide_tab_bar_if_only_one_tab = true
+-- Padding
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -26,5 +26,4 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- and finally, return the configuration to wezterm
 return config
