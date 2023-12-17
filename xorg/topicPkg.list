@@ -1,1 +1,1 @@
-xorg xorg-xinit linux-zen-headers 
+xorg-server xorg xorg-xinit linux-zen-headers 
