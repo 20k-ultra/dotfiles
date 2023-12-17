@@ -27,7 +27,7 @@ Finally, this repo uses [Paru](https://github.com/Morganamilo/paru) for installi
 
 ## GPU Setup
 
-I did not automate this part. Follow https://github.com/korvahannu/arch-nvidia-drivers-installation-guide to setup 4080 (since that's what I have), otherwise, manually get your gpu drivers working. Might have to generate x11 configs after the next step to ensure x11 plays nice with gpu.
+I did not automate this part. Follow https://github.com/korvahannu/arch-nvidia-drivers-installation-guide to setup 4080 (since that's what I have), otherwise, manually get your gpu drivers working. 
 
 ## Setup
 
@@ -42,6 +42,10 @@ cd ~/dotfiles
 ```
 
 This will go into each topic and install the packages and configure them by symlinking dotfiles or running custom configure scripts. See [Structure](#structure) for more info.
+
+## Post Setup
+
+After you run the setup you may need to run `nvidia-xconfig`.
 
 ## Structure
 
