@@ -25,6 +25,10 @@ sudo pacman -Syu git
 
 Finally, this repo uses [Paru](https://github.com/Morganamilo/paru) for installing AUR packages. Follow the Paru repo for [installation](https://github.com/Morganamilo/paru#installation).
 
+## GPU Setup
+
+I did not automate this part. Follow https://github.com/korvahannu/arch-nvidia-drivers-installation-guide to setup 4080 (since that's what I have), otherwise, manually get your gpu drivers working. Might have to generate x11 configs after the next step to ensure x11 plays nice with gpu.
+
 ## Setup
 
 Everything is configured within this repo which will automatically apply changes since they are symlinks! A prompt will ask you what to do if a symlink already exists.
