@@ -1,7 +1,3 @@
-# Load detected X config 
-"autorandr --change"
-    Control+alt + q 
-
 # Open tmp file in vim that automatically pastes output 
 "vim_clip"
     Control+alt + o 
@@ -9,30 +5,6 @@
 # Open dmenu
 "dmenu_run"
     Mod4+d
-
-# Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    XF86AudioRaiseVolume
-
-# Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    XF86AudioLowerVolume
-
-# Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    XF86AudioMute
-
-# Mute microphone
-"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    XF86AudioMicMute
-
-# Increase screen brightness by 10% 
-"light -A 10"
-    XF86MonBrightnessUp
-
-# Decrease screen brightness by 10% 
-"light -U 10"
-    XF86MonBrightnessDown 
 
 # Trigger maim to take screenshot of region and copy to clipboard 
 "maim -s | xclip -selection clipboard -t image/png"

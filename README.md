@@ -8,9 +8,16 @@
 
 ## Prerequisites
 
-Go through the minimum setup post-install found [here](post_install.md).
+When installing with the archinstall tool, use the following settings:
 
-Now that you are logged in as your newly created privileged user, install git:
+    - Bootloader: Systemd-boot
+    - User Account: add one! make it have sudo
+    - Audio: Pipewire
+    - kernels: linux-zen
+    - Network configuration: Use NetworkManager
+    - Optional Repos: multilib
+
+Once you are logged in as your newly created privileged user, install git:
 
 ```
 sudo pacman -Syu git
