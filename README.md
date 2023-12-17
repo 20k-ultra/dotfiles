@@ -36,8 +36,8 @@ Everything is configured within this repo which will automatically apply changes
 Run the following to install all the packages and configure them:
 
 ```
-git clone https://github.com/20k-ultra/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
+git clone https://github.com/20k-ultra/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ./apply.sh
 ```
 
