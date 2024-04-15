@@ -46,6 +46,10 @@ local plugins = {
         },
       },
       options = {
+        env = {
+          GOOS = "linux",
+          GOARCH = "amd64",
+        },
         opt = {
           mouse = "",
           listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
