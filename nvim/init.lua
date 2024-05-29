@@ -77,6 +77,16 @@ local plugins = {
       opts.tabline[2] = status.heirline.make_buflist(status.component.tabline_file_info { close_button = false })
     end,
   },
+  {
+    "nvimdev/lspsaga.nvim",
+    config = function()
+      require("lspsaga").setup {}
+    end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    event = "LspAttach",
+  },
 }
 
 -- initialize lazy
