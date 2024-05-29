@@ -78,6 +78,20 @@ local plugins = {
       opts.tabline[2] = status.heirline.make_buflist(status.component.tabline_file_info { close_button = false })
     end,
   },
+  {
+    "nvimdev/lspsaga.nvim",
+    opts = {
+      callhierarchy = {
+        keys = {
+          edit = "<CR>",
+          toggle_or_req = "<Space>",
+          shuttle = "<Tab>",
+          vsplit = "|",
+          split = "-",
+        },
+      },
+    },
+  },
 }
 
 -- initialize lazy
