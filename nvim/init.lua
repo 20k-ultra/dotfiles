@@ -11,6 +11,7 @@ local plugins = {
   { "AstroNvim/AstroNvim", version = "^4", import = "astronvim.plugins" },
 
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.lsp.lspsaga-nvim" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.ansible" },
